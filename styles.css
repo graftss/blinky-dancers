@@ -5,9 +5,14 @@ body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background-size: 100% 100%;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
+}
+
+.backgroundButton{
+  float: right;
 }
 .title, .actionButton{
   padding:5px 12px;
@@ -21,7 +26,29 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
+  border:10px solid;
+  border-color: red;
   border-radius:10px;
   position:absolute;
+  -webkit-transition: top 0.5s, left 0.5s, border-width 0.5s, border-radius 0.5s, background-color 2s, opacity 0.5s, -webkit-transform 2s, border-color 0.5s;
+
 }
+
+.dancer:hover{
+  border-radius: 0px !important;
+  border: 30px solid;
+}
+
+.growydancer{
+  border-color: yellow;
+}
+
+.blinkydancer{
+  border-color: green;
+}
+
+.wigglydancer{
+  border-color: cornflowerblue;
+}
+
+
