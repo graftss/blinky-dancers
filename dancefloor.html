@@ -13,15 +13,22 @@
   <body class="spaceBackground">
     <div class="topbar">
       <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="Dancer">add a boring dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="BlinkyColorDancer">add a Color dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="WigglyDancer">add a Wiggly dancer</a>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="GrowyDancer">add a Growy dancer</a>
-      <a href="#" class="backgroundButton actionButton" >Change Background</a>
-      <a href="#" class="lineUpButton actionButton" >Line Up!!!!!!!</a>
-      <a href="#" class="actionButton nearestNeighborButton" >Find your nearest dude</a>
     </div>
+    <div class="dancerButtons">
+      <a href="#" class="addDancerButton button" data-dancer-maker-function-name="BlinkyDancer">add a blinky dancer</a>
+      <a href="#" class="addDancerButton button" data-dancer-maker-function-name="Dancer">add a boring dancer</a>
+      <a href="#" class="addDancerButton button" data-dancer-maker-function-name="BlinkyColorDancer">add a Color dancer</a>
+      <a href="#" class="addDancerButton button" data-dancer-maker-function-name="WigglyDancer">add a Wiggly dancer</a>
+      <a href="#" class="addDancerButton button" data-dancer-maker-function-name="GrowyDancer">add a Growy dancer</a>
+    </div>
+    <div class="actionButtons">
+      <a href="#" class="backgroundButton actionButton button" >Change Background</a>
+      <a href="#" class="lineUpButton actionButton button" >Line Up!!!!!!!</a>
+      <a href="#" class="actionButton nearestNeighborButton button" >Group Up!!!!!!!!</a>
+      <a href="#" class="actionButton flushButton button">Flush</a>
+    </div>
+    <div id = "danceFloor"></div>
     <script src="src/init.js"></script>
+    <audio id = "flush" src = "flush.mp3"></audio>
   </body>
 </html>

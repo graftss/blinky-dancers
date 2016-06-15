@@ -38,7 +38,7 @@ $(document).ready(function(){
     );
 
     window.dancers.push(dancer);
-    $('body').append(dancer.$node);
+    $('#danceFloor').append(dancer.$node);
   });
 
   var onChangeBackground = function(event) {
@@ -69,5 +69,43 @@ $(document).ready(function(){
       dancer.isMovingCloser = true;
       console.log(dancer);
     }
+  });
+  $('.flushButton').on('click', function() {
+
+    var center = [ $('body').width()/2, $('body').height()/2 ];
+
+    for (var i = 0; i < window.dancers.length; i++) {
+      window.dancers[i].$node.addClass('mover');
+      window.dancers[i].setPosition(200, 200);
+
+    }
+
+    var m = document.querySelectorAll('.mover');
+
+    setTimeout(function() {
+      $('#flush')[0].play();
+
+      for (var i = 0; i < window.dancers.length; i++){
+        var time = 2000;
+        var player = m[i].animate([
+          { motionOffset: '100%' },
+          { motionOffset: 0 }
+        ], {
+          duration: time,
+          iterations: 1,
+          fill: 'both',
+          easing: 'ease-in',
+          delay: time * (i / window.dancers.length)
+        });
+      }
+    }, 1000);
+
+    setTimeout(function(){
+      //node.html('')
+      for (var i = 0; i < window.dancers.length; i++){
+        window.dancers[i].$node.remove('.dancer');
+      }
+      window.dancers = [];
+    }, 4000 )
   });
 });
